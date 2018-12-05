@@ -4,6 +4,10 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
+import javax.swing.Box;
 
 public class Interface {
 
@@ -53,10 +57,31 @@ public class Interface {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnSubmit = new JButton("Submit");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		btnSubmit.setBounds(10, 11, 89, 23);
 		frame.getContentPane().add(btnSubmit);
 		
 		JButton btnReset = new JButton("Reset");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+				textField_1.setText("");
+				textField_2.setText("");
+				textField_3.setText("");
+				textField_4.setText("");
+				textField_5.setText("");
+				textField_6.setText("");
+				textField_7.setText("");
+				textField_8.setText("");
+				textField_9.setText("");
+				textField_10.setText("");
+				
+			}
+		});
 		btnReset.setBounds(335, 11, 89, 23);
 		frame.getContentPane().add(btnReset);
 		
@@ -142,5 +167,9 @@ public class Interface {
 		textField_10.setColumns(10);
 		textField_10.setBounds(224, 111, 29, 20);
 		frame.getContentPane().add(textField_10);
+		
+		Box horizontalBox = Box.createHorizontalBox();
+		horizontalBox.setBounds(311, 186, 74, 32);
+		frame.getContentPane().add(horizontalBox);
 	}
 }

@@ -33,7 +33,6 @@ int coefficient = c;
 int denominator = d;
 
 e++;
-c=c;
 d=(e+1)*d;
 
 }
