@@ -4,7 +4,8 @@ public class System {
 	private static int e;
 	private static int c;
 	private static int d;
-	
+	private static int uB;
+	private static int lB;
 	
 	public int getE() {
 		return e;
@@ -28,12 +29,8 @@ public class System {
 	
 public void integrate()
 {
-int exponent = e;
-int coefficient = c;
-int denominator = d;
 
-e++;
-d=(e+1)*d;
+
 
 }
 	

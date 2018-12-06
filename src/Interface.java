@@ -23,6 +23,7 @@ public class Interface {
 	private JTextField textField_8;
 	private JTextField textField_9;
 	private JTextField textField_10;
+	private JLabel lblIntegral;
 
 	/**
 	 * Launch the application.
@@ -55,11 +56,35 @@ public class Interface {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+		//This should submit the math for the function
 		JButton btnSubmit = new JButton("Submit");
 		btnSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+			int a = Integer.getInteger(textField.getText()).intValue(); //c
+			int d = Integer.getInteger(textField_3.getText()).intValue(); //e
+			int i = Integer.getInteger(textField_8.getText()).intValue(); //d
+			
+			int b = Integer.getInteger(textField_1.getText()).intValue(); //c
+			int e = Integer.getInteger(textField_4.getText()).intValue(); //e
+			int j = Integer.getInteger(textField_9.getText()).intValue(); //d
+			
+			int c = Integer.getInteger(textField_2.getText()).intValue(); //c
+			int f = Integer.getInteger(textField_5.getText()).intValue(); //e
+			int k = Integer.getInteger(textField_10.getText()).intValue(); //d
+			
+			int g = Integer.getInteger(textField_6.getText()).intValue(); //u
+			int h = Integer.getInteger(textField_7.getText()).intValue(); //l
+			
+			
+			
+			int l = Integer.getInteger(lblIntegral.getText()).intValue();
+			
+			int y = ( ((a*(g^(d+1)))/(i*(d+1)))+((b*(g^(e+1)))/(j*(e+1)))+((c*(g^(f+1)))/(k*(f+1))) );
+			int t = ( ((a*(h^(d+1)))/(i*(d+1)))+((b*(h^(e+1)))/(j*(e+1)))+((c*(h^(f+1)))/(k*(f+1))) );
+			
+			int u = y-t;
+			lblIntegral.setText(String.valueOf(u));
+			
 			}
 		});
 		btnSubmit.setBounds(10, 11, 89, 23);
@@ -168,8 +193,8 @@ public class Interface {
 		textField_10.setBounds(224, 111, 29, 20);
 		frame.getContentPane().add(textField_10);
 		
-		Box horizontalBox = Box.createHorizontalBox();
-		horizontalBox.setBounds(311, 186, 74, 32);
-		frame.getContentPane().add(horizontalBox);
+		lblIntegral = new JLabel("");
+		lblIntegral.setBounds(320, 179, 46, 14);
+		frame.getContentPane().add(lblIntegral);
 	}
 }
